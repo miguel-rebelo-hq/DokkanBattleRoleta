@@ -1,0 +1,200 @@
+﻿@page
+@model DokkanBattleRoleta.Pages.RoletaModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roleta</title>
+    <link rel="stylesheet" type="text/css" href="~/site.css">
+    <style>
+        body {
+            font-family: Arial, cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: 'Saiyan-Sans', cursive, sans-serif;
+            text-align: center;
+            font-size: 5em;
+            margin: 30px 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            h1 img {
+                margin: 0 10px;
+                height: 1.8em;
+            }
+
+        .results {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .result-box {
+            border: 2px solid #FF4500;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+            .result-box h2 {
+                font-size: 1.8em;
+                margin-bottom: 10px;
+                text-align: center;
+                color: #FF4500;
+            }
+
+        .result-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .roulette-button {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #FF6347, #FF4500);
+            border: 5px solid #B22222;
+            position: relative;
+            color: #FFD700;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            line-height: 130px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+            .roulette-button:hover {
+                transform: scale(1.1);
+                background: radial-gradient(circle at 30% 30%, #FF4500, #FF6347);
+            }
+
+            .roulette-button:active {
+                transform: scale(0.95);
+            }
+
+            /* Estrelas */
+            .roulette-button::before,
+            .roulette-button::after,
+            .roulette-button .star1,
+            .roulette-button .star2 {
+                content: "★";
+                color: #FFD700;
+                font-size: 22px;
+                position: absolute;
+            }
+
+            .roulette-button::before {
+                top: 25%;
+                left: 22%;
+            }
+
+            .roulette-button::after {
+                top: 25%;
+                right: 23%;
+            }
+
+            .roulette-button .star1 {
+                bottom: 24%;
+                left: 20%;
+            }
+
+            .roulette-button .star2 {
+                bottom: 24%;
+                right: 23%;
+            }
+
+        .top-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #FF4500;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+            .top-button:hover {
+                background-color: #FF6347;
+            }
+
+    </style>
+</head>
+<body>
+    <a href="/Thanks" class="top-button">Agradecimentos</a>
+    <h1>
+        <img src="/images/nimbus.png" alt="Nimbus" />
+        <img src="/images/roulette.svg" alt="Slot Machine" />
+        Roleta Dokkan Battle
+        <img src="/images/roulette.svg" alt="Slot Machine" />
+        <img src="/images/nimbus.png" alt="Nimbus" />
+    </h1>
+
+    <div class="results">
+        <div class="result-box">
+            <h2>🎮 Evento:</h2>
+            <p class="result-text" id="evento-text">@Model.Evento</p>
+        </div>
+        <div class="result-box">
+            <h2>📂 Categoria:</h2>
+            <p class="result-text" id="categoria-text">@Model.Categoria</p>
+        </div>
+        <div class="result-box">
+            <h2>📜 Condição:</h2>
+            <p class="result-text" id="condicao-text">@Model.Condicao</p>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <form method="post">
+            <button type="submit" class="roulette-button" asp-page-handler="RodarRoleta">
+                Rodar
+                <span class="star1">★</span>
+                <span class="star2">★</span>
+            </button>
+        </form>
+    </div>
+
+    <!-- áudio -->
+    <audio id="rodar-sound" src="~/sounds/rodar.mp3" preload="auto"></audio>
+
+    <script>
+
+        document.addEventListener("load", loadPage());
+        function loadPage() {
+            playSound();
+            document.getElementById('evento-text').classList.add("animate__fadeInUp");
+        }
+
+
+        function playSound() {
+            var audio = document.getElementById('rodar-sound');
+            audio.play().catch(error => {
+                console.error('Erro ao reproduzir o áudio:', error);
+            });
+        }
+    </script>
+</body>
+</html>
