@@ -1,0 +1,167 @@
+﻿@page
+@using static System.Net.Mime.MediaTypeNames
+@model DokkanBattleRoleta.Pages.ThanksModel
+@{
+    ViewData["Title"] = "Agradecimentos";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agradecimentos - Roleta Dokkan Battle</title>
+    <link rel="stylesheet" type="text/css" href="~/site.css">
+    <style>
+        Font
+        -face {
+        font-family: 'Saiyan-Sans';
+            src: url('/fonts/Saiyan-Sans.ttf') format('truetype');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #fff;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #FF4500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+            .nav-button:hover {
+                background-color: #FF6347;
+                transform: scale(1.05);
+            }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #000;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .obrigado {
+            font-size: 4em;
+            font-family: 'Saiyan-Sans', cursive, sans-serif;
+            color: #FFD700;
+            text-shadow: 3px 3px 0px #000, -3px -3px 0px #000, 3px -3px 0px #000, -3px 3px 0px #000;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .thank-you-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            border-radius: 10px;
+        }
+
+        .special-thanks {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #B22222;
+            margin-top: 20px;
+        }
+
+        .thanks-list {
+            font-size: 1.3em;
+            list-style: none;
+            padding: 0;
+        }
+
+            .thanks-list li {
+                margin: 5px 0;
+            }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            width: fit-content;
+            padding: 10px 20px;
+            background-color: #FF4500;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+            .back-button:hover {
+                background-color: #FF6347;
+                transform: scale(1.05);
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegação -->
+    <div class="nav-container">
+        <a href="/Roleta" class="nav-button">Roleta</a>
+        <a href="/Categorias" class="nav-button">Categorias</a>
+        <a href="/Condicoes" class="nav-button">Condições</a>
+        <a href="/Eventos" class="nav-button">Eventos</a>
+        <a href="/Thanks" class="nav-button">Agradecimentos</a>
+    </div>
+
+    <div class="container">
+        <h1><span class="obrigado">OBRIGADO</span> <br><strong>por usares a Roleta Dokkan Battle!</strong></h1>
+        <p>
+            O objetivo desta roleta é tornar o jogo mais dinâmico e divertido, incentivando os jogadores a utilizarem personagens que muitas vezes ficam esquecidos na box.
+            Com esta roleta, podemos explorar novas estratégias e desafios, aproveitando ao máximo o conteúdo do Dokkan Battle.
+        </p>
+
+        <img src="/images/gokuthanks.jpg" alt="Goku Thanks" class="thank-you-img" />
+
+        <p>
+            Agradeço a todos os utilizadores que participaram e ajudaram a melhorar esta ferramenta ao longo do tempo.
+        </p>
+
+        <p class="special-thanks">Especial agradecimento aos companheiros:</p>
+        <ul class="thanks-list">
+            <li>Titos</li>
+            <li>Tozica</li>
+            <li>Bicho</li>
+            <li>Goncext</li>
+            <li>Granvic</li>
+            <li>Tisi</li>
+        </ul>
+
+        <a href="/Roleta" class="back-button">⬅ Voltar à Roleta</a>
+    </div>
+
+</body>
+</html>

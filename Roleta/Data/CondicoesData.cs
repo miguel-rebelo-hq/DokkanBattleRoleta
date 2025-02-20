@@ -15,6 +15,8 @@ public static class CondicoesData
         new Condicao { Id = 9, Descricao = "🆓 1 Free To Play + 🎒💾 Items" },
         new Condicao { Id = 10, Descricao = "🌈 Todas as cores + 🚫 No Item" },
         new Condicao { Id = 11, Descricao = "🌈 Todas as cores + 🎒💾 Items" },
-
+        new Condicao { Id = 12, Descricao = "🌈 Todas as cores + 🏆 Líder da categoria + 🎒💾 Items" },
+        new Condicao { Id = 13, Descricao = "🌈 Todas as cores + 🏆 Líder da categoria + 🚫 No Item" },
+        new Condicao { Id = 14, Descricao = "🏆 Líder da Categoria + 🚫 No Friend Leader + 🎒💾 Items" },
     };
 }

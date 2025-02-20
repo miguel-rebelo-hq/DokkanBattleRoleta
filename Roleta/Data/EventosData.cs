@@ -125,7 +125,7 @@ namespace DokkanBattleRoleta.Data
         new Evento { Id = 116, Nome = "Red Zone [Vegeta's Story Edition] (Level 3: Androids/Cell Saga)", RanksElegiveis = new List<int> { 1, 2 } },
         new Evento { Id = 117, Nome = "Red Zone [Vegeta's Story Edition] (Level 4: Majin Buu Saga)", RanksElegiveis = new List<int> { 1, 2 } },
         new Evento { Id = 118, Nome = "Red Zone [Vegeta's Story Edition] (Level 5: God of Destruction Beerus Saga)", RanksElegiveis = new List<int> { 1, 2 } },
-        new Evento { Id = 119, Nome = "Red Zone [Vegeta's Story Edition] (Level 6: Revivel of Frieza Saga=", RanksElegiveis = new List<int> { 1, 2 } },
+        new Evento { Id = 119, Nome = "Red Zone [Vegeta's Story Edition] (Level 6: Revivel of Frieza Saga)", RanksElegiveis = new List<int> { 1, 2 } },
         new Evento { Id = 120, Nome = "Supreme Magnificent Battle [Gathering of Super Warriors Edition (Level 1: Dragon Ball)", RanksElegiveis = new List<int> { 5, 6 } },
         new Evento { Id = 121, Nome = "Supreme Magnificent Battle [Gathering of Super Warriors Edition (Level 2: Dragon Ball Z Part 1)", RanksElegiveis = new List<int> { 5, 6 } },
         new Evento { Id = 122, Nome = "Supreme Magnificent Battle [Gathering of Super Warriors Edition (Level 3: Dragon Ball Z Part 2)", RanksElegiveis = new List<int> { 5, 6 } },
