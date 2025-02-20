@@ -1,0 +1,103 @@
+﻿ @page
+@model DokkanBattleRoleta.Pages.SobreModel
+@{
+    ViewData["Title"] = "Sobre";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sobre - Roleta Dokkan Battle</title>
+    <link rel="stylesheet" type="text/css" href="~/site.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #000;
+            line-height: 1.8;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #FF4500;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #B22222;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: justify;
+        }
+
+        .back-button {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: #FF4500;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-align: center;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+            .back-button:hover {
+                background-color: #FF6347;
+                transform: scale(1.05);
+            }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>O que é a Roleta Dokkan Battle?</h1>
+        <p>
+            A Roleta Dokkan Battle é uma aplicação desenvolvida em ASP.NET no Visual Studio 2022, que permite aos jogadores participarem num desafio interativo, onde uma roleta escolhe aleatoriamente um evento, uma categoria e uma condição.
+        </p>
+        <p>
+            Os eventos estão associados a categorias classificadas por Ranks (E a S) para manter o equilíbrio dos desafios, evitando combinações impossíveis.
+        </p>
+        <p>
+            Criada para aumentar a diversão entre amigos, a roleta incentiva a criatividade na formação de equipas e promove desafios estratégicos e variados no Dragon Ball Z: Dokkan Battle.
+        </p>
+
+        <h2>📌 Porque é que existem restrições?</h2>
+        <p>
+            Para diminuir a possibilidade de uma categoria fraca ser atribuída a um evento difícil, fazendo com que no primeiro turno do jogo ou no primeiro golpe o evento termine de imediato. O objetivo dos Ranks e da respetiva associação é para que isso não aconteça.
+        </p>
+
+        <h2>🎖️ Os Ranks das categorias são baseados em quê?</h2>
+        <p>
+            Os Ranks são definidos com base na potência das cartas disponíveis no jogo. A avaliação considera a composição geral de cada categoria, bem como o desempenho das cartas em combate. Com base na dificuldade do evento e no dano recebido dos inimigos, cada categoria é associada ao evento de forma equilibrada, garantindo um desafio justo e estratégico.
+        </p>
+
+        <h2>🏆 Quem é o vencedor de cada ronda?</h2>
+        <p>
+            A determinação do vencedor pode variar consoante diferentes fatores, uma vez que todos os participantes competem pelo primeiro lugar. No entanto, apenas um pode sair vitorioso. O vencedor é aquele que conclui o evento no menor tempo possível. Alternativamente, em eventos longos e desafiantes, onde é atribuída uma categoria menos poderosa (mas ainda viável), a vitória pode ser concedida ao jogador que conseguir progredir mais longe no evento.
+        </p>
+
+        <a href="/Roleta" class="back-button">🔙 Voltar à Roleta</a>
+    </div>
+
+</body>
+</html>

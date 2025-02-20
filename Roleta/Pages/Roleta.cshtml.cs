@@ -10,9 +10,9 @@ namespace DokkanBattleRoleta.Pages
 {
     public class RoletaModel : PageModel
     {
-        public string Evento { get; set; }
-        public string Categoria { get; set; }
-        public string Condicao { get; set; }
+        public string Evento { get; set; } = String.Empty;
+        public string Categoria { get; set; } = String.Empty;
+        public string Condicao { get; set; } = String.Empty;
         public List<Categoria> CategoriasFiltradas { get; set; } = new List<Categoria>();
 
         public int? EventoSelecionadoId

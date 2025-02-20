@@ -10,8 +10,11 @@ public static class CondicoesData
         new Condicao { Id = 4, Descricao = "💾 Support Memory" },
         new Condicao { Id = 5, Descricao = "🎒 1 Item + 💾 Support Memory" },
         new Condicao { Id = 6, Descricao = "🎒🎒 2 Items + 💾 Support Memory" },
-        new Condicao { Id = 7, Descricao = "🏆 Usar o líder da categoria + 🎒💾 Items" },
-        new Condicao { Id = 8, Descricao = "🏆 Usar o líder da categoria + 🚫 No Item" },
+        new Condicao { Id = 7, Descricao = "🏆 Líder da categoria + 🎒💾 Items" },
+        new Condicao { Id = 8, Descricao = "🏆 Líder da categoria + 🚫 No Item" },
+        new Condicao { Id = 9, Descricao = "🆓 1 Free To Play + 🎒💾 Items" },
+        new Condicao { Id = 10, Descricao = "🌈 Todas as cores + 🚫 No Item" },
+        new Condicao { Id = 11, Descricao = "🌈 Todas as cores + 🎒💾 Items" },
 
     };
 }

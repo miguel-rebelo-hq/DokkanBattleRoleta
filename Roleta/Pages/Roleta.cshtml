@@ -32,6 +32,29 @@
                 height: 1.8em;
             }
 
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .nav-button {
+            background-color: #FF4500;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+
+            .nav-button:hover {
+                background-color: #FF6347;
+            }
+
         .results {
             margin: 20px auto;
             max-width: 800px;
@@ -91,59 +114,19 @@
                 transform: scale(0.95);
             }
 
-            /* Estrelas */
-            .roulette-button::before,
-            .roulette-button::after,
-            .roulette-button .star1,
-            .roulette-button .star2 {
-                content: "★";
-                color: #FFD700;
-                font-size: 22px;
-                position: absolute;
-            }
-
-            .roulette-button::before {
-                top: 25%;
-                left: 22%;
-            }
-
-            .roulette-button::after {
-                top: 25%;
-                right: 23%;
-            }
-
-            .roulette-button .star1 {
-                bottom: 24%;
-                left: 20%;
-            }
-
-            .roulette-button .star2 {
-                bottom: 24%;
-                right: 23%;
-            }
-
-        .top-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #FF4500;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 1em;
-        }
-
-            .top-button:hover {
-                background-color: #FF6347;
-            }
-
     </style>
 </head>
 <body>
-    <a href="/Thanks" class="top-button">Agradecimentos</a>
+
+    <!-- Navegação -->
+    <div class="nav-buttons">
+        <a href="/Sobre" class="nav-button">Sobre</a>
+        <a href="/Categorias" class="nav-button">Categorias</a>
+        <a href="/Condicoes" class="nav-button">Condições</a>
+        <a href="/Eventos" class="nav-button">Eventos</a>
+        <a href="/Thanks" class="nav-button">Agradecimentos</a>
+    </div>
+
     <h1>
         <img src="/images/nimbus.png" alt="Nimbus" />
         <img src="/images/roulette.svg" alt="Slot Machine" />
@@ -170,8 +153,8 @@
     <div class="button-container">
         <form method="post">
             <button type="submit" class="roulette-button" asp-page-handler="RodarRoleta">
-                Rodar
                 <span class="star1">★</span>
+                Rodar
                 <span class="star2">★</span>
             </button>
         </form>
